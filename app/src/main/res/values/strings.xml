@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Android-Working with API</string>
+    <string name="activity_tv">List of Countries</string>
 </resources>
