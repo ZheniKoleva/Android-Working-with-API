@@ -12,4 +12,12 @@ class CountryRepository constructor(
             null
         }
     }
+
+    fun getCountryDetails(name: String): Call<CountryDetails>? {
+        return try {
+            countryService.getCountryDetails(name)
+        } catch (e: Exception) {
+            null
+        }
+    }
 }

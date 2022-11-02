@@ -6,4 +6,7 @@ import retrofit2.http.GET
 interface CountryService {
     @GET("all")
     fun getAllCountries(): Call<List<Country>>
+
+    @GET("name/{name}")
+    fun getCountryDetails(name: String) : Call<CountryDetails>
 }
