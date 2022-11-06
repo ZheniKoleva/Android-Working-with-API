@@ -2,6 +2,7 @@ package com.example.android_workingwithapi
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.android_workingwithapi.databinding.CountryListItemBinding
@@ -22,14 +23,18 @@ class CountryAdapter(private val countries: List<Country>) :
     override fun onBindViewHolder(holder: CountryViewHolder, position: Int) {
         val currentCountry = countries[position]
         holder.binding.apply {
-            name = currentCountry.name
-            capital = currentCountry.capital
+            this.country = currentCountry
 
-            Glide
-                .with(root.context)
+            Glide.with(root.context)
                 .load(currentCountry.flags.png)
                 .placeholder(R.drawable.ic_launcher_foreground)
                 .into(ivFlag)
+
+            root.setOnClickListener {
+                val action = CountriesListFragmentDirections
+                    .actionCountriesListFragmentToCountryDetailsFragment(currentCountry.name)
+                root.findNavController().navigate(action)
+            }
         }
     }
 

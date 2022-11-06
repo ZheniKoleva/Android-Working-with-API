@@ -7,36 +7,23 @@
     <data>
 
         <variable
-            name="name"
-            type="String" />
-
-        <variable
-            name="capital"
-            type="String" />
-
-        <variable
-            name="region"
-            type="String" />
-
-        <variable
-            name="population"
-            type="String" />
-
-        <variable
-            name="area"
-            type="String" />
+            name="country"
+            type="com.example.android_workingwithapi.CountryViewDetails" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true">
 
         <TextView
             android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Country details:"
+            android:text="@string/country_details_title"
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -62,7 +49,7 @@
             android:id="@+id/tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Country name: @{name}"
+            android:text="@{country.name}"
             android:textSize="28sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -76,7 +63,7 @@
             android:id="@+id/tv_capital"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Country capital: @{capital}"
+            android:text="@{country.capital}"
             android:textSize="24sp"
             android:textStyle="italic"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -90,7 +77,7 @@
             android:id="@+id/tv_region"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Country region: @{region}"
+            android:text="@{country.region}"
             android:textSize="22sp"
             android:textStyle="italic"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -104,7 +91,7 @@
             android:id="@+id/tv_population"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Population: @{population}"
+            android:text="@{country.population}"
             android:textSize="22sp"
             android:textStyle="italic"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -114,11 +101,11 @@
             app:layout_constraintVertical_bias="0.1"
             tools:text="Population" />
 
-        <TextView
+       <TextView
             android:id="@+id/tv_area"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Area: @{area}"
+            android:text="@{country.area}"
             android:textSize="22sp"
             android:textStyle="italic"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -132,7 +119,7 @@
             android:id="@+id/btn_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Back"
+            android:text="@string/btn_back"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

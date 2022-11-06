@@ -1,9 +1,9 @@
 package com.example.android_workingwithapi
 
 data class Country(
-    var name: String,
-    var capital: String,
-    var flags: Flag
+    val name: String,
+    val capital: String,
+    val flags: Flag
 )
 
 data class Flag(

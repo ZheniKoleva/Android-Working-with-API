@@ -6,12 +6,8 @@
     <data>
 
         <variable
-            name="name"
-            type="String" />
-
-        <variable
-            name="capital"
-            type="String" />
+            name="country"
+            type="com.example.android_workingwithapi.Country" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -38,7 +34,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:padding="8dp"
-            android:text="@{name}"
+            android:text="@{country.name}"
             android:textSize="24sp"
             android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@id/iv_flag"
@@ -52,7 +48,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:padding="8dp"
-            android:text="@{capital}"
+            android:text="@{country.capital}"
             android:textSize="20sp"
             android:textStyle="italic"
             app:layout_constraintStart_toEndOf="@id/iv_flag"
